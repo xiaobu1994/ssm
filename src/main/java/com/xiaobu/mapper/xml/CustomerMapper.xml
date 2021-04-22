@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.xiaobu.mapper.CustomerMapper">
+  <resultMap id="BaseResultMap" type="com.xiaobu.entity.Customer">
+    <!--@mbg.generated-->
+    <!--@Table ssm.customer-->
+    <id column="cid" jdbcType="INTEGER" property="cid" />
+    <result column="cname" jdbcType="VARCHAR" property="cname" />
+    <result column="register_time" jdbcType="TIMESTAMP" property="registerTime" />
+    <result column="recommender" jdbcType="VARCHAR" property="recommender" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    <!--@mbg.generated-->
+    cid, cname, register_time, recommender
+  </sql>
+</mapper>

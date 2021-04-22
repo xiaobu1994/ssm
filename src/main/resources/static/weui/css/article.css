@@ -1,0 +1,62 @@
+/*!
+ * 作者:李超
+ * qq:593302249
+ * 基于腾讯weui
+ * Licensed under the MIT license
+ */
+body {
+	background-color: #FBF9FE;
+}
+.page_title {
+	text-align: center;
+	font-size: 24px;
+	color: #3CC51F;
+	font-weight: 400;
+	margin: 0px 15%;
+	color:#DE7C23;
+	margin-top:1rem;
+}
+
+.small_title{
+	color: #404040;
+	font-size: 17px;
+	margin-left:0em;
+	text-indent:2em;
+}
+img{
+	width:100%;
+	display: block;
+	margin: auto;
+}
+ul{
+	list-style:decimal inside;
+	margin:0;
+	padding:0;
+	font-size:0;
+}
+li{
+	font-size:16px;
+	text-indent:2em;
+	margin-bottom:0.65rem;
+}
+
+h2{
+font-weight:bold !important;
+font-size:17px !important;
+}
+
+/*银河白*/
+.background_color_0{
+  background-color:#FFFFFF;
+  font-size:15px;
+}
+
+.background_color_1{
+  background-color:#D9D9D9;
+  font-size:15px;
+}
+
+.cell_extras{
+	font-size:11px;
+	font-style:italic;
+}

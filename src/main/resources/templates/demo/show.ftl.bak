@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
+    <title>巡检点信息</title>
+    <link rel="stylesheet" href="/static/dist/vux.min.css">
+    <link rel="stylesheet" href="/static/dist/plugins/alert/index.min.css">
+</head>
+<style>
+    .flex-demo {
+        text-align: center;
+        color: #fff;
+        background-color: #20b907;
+        margin-bottom: 8px;
+        border-radius: 4px;
+        -webkit-background-clip: padding-box;
+    }
+
+    .dialog-q {
+        top: 10px !important;
+    }
+</style>
+
+<body ontouchstart style="background-color: #FBF9FE;">
+<div id="demo">
+    <group label-width="5em" title="Align-items">
+        <cell primary="content" title="评价" v-model="grade"  @click.native="onClick" is-link></cell>
+    </group>
+    <group label-width="5em" title="Align-items">
+        <cell primary="content" title="对订单有疑惑"  v-show="isShow"  @click.native="onClick2" is-link arrow-direction="down"></cell>
+    </group>
+</div>
+
+
+<script src="/static/dist/vue.min.js"></script>
+<script src="/static/dist/vue-resource.min.js"></script>
+<script src="/static/dist/plugins/alert/index.min.js"></script>
+<script src="/static/dist/components/rater/index.min.js"></script>
+<script src="/static/dist/components/form-preview/index.min.js"></script>
+<script src="/static/dist/components/group/index.min.js"></script>
+<script src="/static/dist/components/cell/index.min.js"></script>
+<script src="/static/dist/components/x-input/index.min.js"></script>
+<script src="/static/dist/components/x-textarea/index.min.js"></script>
+<script src="/static/dist/components/selector/index.min.js"></script>
+<script src="/static/dist/components/x-button/index.min.js"></script>
+<script src="/static/dist/components/x-dialog/index.min.js"></script>
+<script src="/static/dist/components/icon/index.min.js"></script>
+<script type="text/javascript" src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+<script>
+    Vue.component('rater', vuxRater);
+    Vue.component('group', vuxGroup);
+    Vue.component('cell', vuxCell);
+    Vue.component('x-input', vuxXInput);
+    Vue.component('selector', vuxSelector);
+    Vue.component('x-button', vuxXButton);
+    Vue.component('x-dialog', vuxXDialog);
+    Vue.component('x-icon', vuxIcon);
+    Vue.component('form-preview', vuxFormPreview);
+    Vue.component('x-textarea', vuxXTextarea);
+    Vue.use(vuxAlertPlugin);
+
+
+    Vue.prototype.$alert= function(title) {
+        this.$vux.alert.show({
+            content: title
+        });
+    };
+
+    var v4m = new Vue({
+        el: '#demo',
+        data: {
+            isShow:true,
+            list2:[],
+            grade:'未评价',
+            title:'付款金额',
+            list: [{
+                label: '商品',
+                value: '电动打蛋机'
+            }, {
+                label: '标题标题',
+                value: '名字名字名字'
+            }, {
+                label: '标题标题',
+                value: '很长很长的名字很长很长的名字很长很长的名字很长很长的名字很长很长的名字'
+            }],
+            buttons1: [
+            ],
+            buttons2: [
+
+            ]
+        },
+        computed: {
+
+        },
+        watch: {
+
+        },
+        methods: {
+            onClick:function(){
+                window.location.href = 'https://www.baidu.com/';
+
+            },
+            onClick2:function(){
+                window.location.href = 'https://www.baidu.com/';
+
+            },
+
+        },
+        created: function () {
+
+        },
+        ready: function () {
+
+        }
+
+    })
+</script>
+
+</body>
+
+</html>
